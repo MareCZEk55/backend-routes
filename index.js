@@ -2,6 +2,7 @@ import express from 'express'
 const app = express()
 import app1Routes from "./routes/app1.js"
 import app2Routes from "./routes/app2.js"
+import app3Routes from "./routes/app3.js"
 
 import path from "path"
 import { fileURLToPath } from 'url';
@@ -28,6 +29,7 @@ app.get('/', (req, res) => {
 
 app.use("/app1", app1Routes);
 app.use("/app2", app2Routes);
+app.use("/app3", app3Routes);
 
 app.get("/generateerror", async (req, res, next) => {
     setTimeout(() => {
