@@ -10,7 +10,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 app.use(express.static(path.join(__dirname, "public")))
-
+app.disable('x-powered-by')
 
 const logger = (req, res, next) => {
     const timeOptions = {day: "2-digit", month: "2-digit", year:"numeric", hour: "2-digit", minute: "2-digit", second: "2-digit"}
